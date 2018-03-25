@@ -1,0 +1,44 @@
+<script>
+	(function(){
+		var fav = angular.module('favorites',[]);
+		fav.run(function($rootScope){
+			$rootScope.showAll = atts;
+		});
+	})();
+
+	var load_javascript = function(id, src) {
+	    var tag = 'script';
+	    var js, fjs = document.getElementsByTagName(tag)[0];
+
+	    if (document.getElementById(id)) return;
+
+	    js = document.createElement(tag);
+	    js.id = id;
+	    js.src = src;
+
+	    fjs.parentNode.insertBefore(js, fjs);
+  	};
+
+  load_javascript('facebook-jssdk', 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11');
+
+</script>
+
+<div ng-app="favorites" class="fav-main">
+	<div ng-repeat="(key,item) in showAll">
+		<h3 ng-show="item.length">{{key==="0"?'Tracks':key==="1"?'Artists':key==="2"?'Albums':'Custom'}}</h3>
+		<div class="show-track">
+			<div ng-repeat="elem in item">
+				<div class="cardify">
+					<img ng-src="{{elem.image}}" alt={{elem.name}}>
+					<h4 ng-show="elem.name">{{elem.name}}</h4>
+					<h5 ng-show="elem.artist">{{elem.artist}}</h5>
+					<h5 ng-show="elem.description">{{elem.description}}</h5>
+					<a class="btn btn-primary btn-sm" href="fb-messenger://share/?link= https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fsharing%2Freference%2Fsend-dialog&app_id=123456789">Send In Messenger</a><br><br>		
+					<div id="fb-root"></div>
+					<div class="fb-like" data-href="http://ec2-18-216-35-8.us-east-2.compute.amazonaws.com/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

@@ -1,0 +1,35 @@
+.cardify{
+  padding: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+.cardify h4{
+  max-width: 200px;
+}
+.show-track { 
+  display: flex;
+  flex-direction: row;
+  margin-top:40px;
+}
+
+.fb-like{
+  max-width: 200px;
+  overflow:scroll;
+}
+
+
+.fav-main h3{
+  text-align: center;
+}
+.show-track div { 
+  margin-left: 10px;
+}
+.show-track div img { 
+  width: 200px; 
+  height: 200px; 
+}
+@media screen and (max-width: 400px) {
+  #show-track div { margin: 0; }
+  #show-track { padding: 0; }
+  
+}

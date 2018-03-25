@@ -1,0 +1,44 @@
+<div style="display: flex;flex-direction: row;flex-flow: row wrap;">
+<div id="chart_div"></div>
+<div id="piechart" style="width: 500px; height: 500px;"></div>
+</div>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script>
+
+	document.addEventListener("DOMContentLoaded", function(event) {
+	    google.charts.load('current', {'packages':['corechart']});
+	    google.charts.setOnLoadCallback(drawChart);
+	    function drawChart() {
+	      var data = google.visualization.arrayToDataTable([
+	      ['Element', 'Count', { role: 'style' }],
+	      ['Posts', parseInt(graphatts[0]), 'green'],  
+	      ['Users', parseInt(graphatts[1]), 'color: #e5e4e2'],          
+	      ['Comments', parseInt(graphatts[2]), 'gold'],
+	        
+	     ]);
+	    var options = {'title':'Posts, Comments and Users',
+	            'width':500,
+	            'height':500};
+	  
+	    var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+	    chart.draw(data, options);
+
+	    var data_fav = google.visualization.arrayToDataTable([
+          ['Favorites', 'Number'],
+          ['Track',   parseFloat(favdata[0])],
+          ['Artist',  parseFloat(favdata[1])],
+          ['Album',  parseFloat(favdata[2])],
+          ['Custom', parseFloat(favdata[3])]
+        ]);
+        var options_fav = {
+          title: 'Favourites'
+        };
+	    var chart_fav = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart_fav.draw(data_fav, options_fav);
+    }
+  });
+	
+	
+
+</script>

@@ -1,0 +1,85 @@
+/*
+Theme Name:     athena child theme
+Description:    child theme for customization
+Author:         archit
+Template:       athena
+
+(optional values you can add: Theme URI, Author URI, Version, License, License URI, Tags, Text Domain)
+*/
+@import url('https://fonts.googleapis.com/css?family=Monoton');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Trocchi');
+
+h1.entry-title{
+	font-family: 'Trocchi';
+	text-align: center;
+}
+
+h1.site-title{
+	font-family: 'Monoton';
+}
+
+p.site-description{
+	font-family: 'Quicksand';
+}
+
+#athena-jumbotron h2.header-text{
+	font-family: 'Trocchi';
+}
+
+.home-musilog h3{
+	font-family: 'Quicksand';
+	text-align: justify;
+}
+
+.fav-main h3{
+	font-family: 'Trocchi';
+}
+
+.fav-main h4{
+	font-family: 'Pacifico';
+}
+
+.fav-main h5{
+	font-family: 'Quicksand';
+}
+
+.about-musilog h3{
+	font-family: 'Pacifico';
+	font-size: 2em;
+}
+
+.about-musilog p{
+	font-family: 'Quicksand';
+	font-size: 1.5em;
+	text-align: justify;
+}
+
+.contact-musilog{
+	display: flex;
+	flex-direction: row;
+	flex-flow: row wrap;
+}
+
+.contact-musilog .cardify{
+	text-align: center;
+	margin-left: auto;
+	width: 390px;
+}
+.contact-musilog .cardify h3{
+	text-align: center;
+	font-family: 'Pacifico',cursive;
+}
+.contact-musilog .cardify h4{
+	text-align: center;
+	font-family: 'Quicksand';
+	display: inline;
+}
+
+.iframed{
+	margin-top:30px;
+}
+ .iframed h3{
+ 	font-family: 'Quicksand';
+ }
